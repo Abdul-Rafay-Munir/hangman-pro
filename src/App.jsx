@@ -96,7 +96,7 @@ function App() {
         />
       }
       <header>
-        <h1>Hangman Challenge</h1>
+        <h1>Hangman Pro</h1>
         <p>Guess the hidden word before you run out of 6 lives — every wrong guess brings the hangman closer to his fate!</p>
 
       </header>
