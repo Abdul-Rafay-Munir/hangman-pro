@@ -24,7 +24,7 @@ function App() {
     const isCorrect = isGuessed && currentWord.includes(letter)
     const isWrong = isGuessed && !currentWord.includes(letter)
     const className = clsx(
-      "w-[35px] h-[35px] bg-[#FCBA29] border-[#D7D7D7] rounded-[3px] cursor-pointer", {
+      "w-[35px] h-[35px] bg-[#FCBA29] border border-[#D7D7D7] rounded-[3px] cursor-pointer", {
         "bg-[#10A95B]": isCorrect,
         "bg-[#EC5D49]": isWrong,
         "opacity-50 cursor-not-allowed": isGameOver,
@@ -118,7 +118,7 @@ function App() {
         {keyboardElements}
       </section>
       
-      {isGameOver && <button className="new-game" onClick={startNewGame}>New Game</button>}
+      {isGameOver && <button className="bg-[#11B5E5] border border-[D7D7D7] rounded-sm w-[225px] px-[12px] py-[14px] h-[40px] block cursor-pointer mx-auto" onClick={startNewGame}>New Game</button>}
     </main>
   )
 }
