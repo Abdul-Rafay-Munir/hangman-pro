@@ -23,10 +23,12 @@ function App() {
     const isGuessed = guessedLetters.includes(letter)
     const isCorrect = isGuessed && currentWord.includes(letter)
     const isWrong = isGuessed && !currentWord.includes(letter)
-    const className = clsx({
-      "correct": isCorrect,
-      "wrong": isWrong
-    })
+    const className = clsx(
+      "w-[35px] h-[35px] bg-[#FCBA29] border-[#D7D7D7] rounded-[3px] cursor-pointer", {
+        "bg-[#10A95B]": isCorrect,
+        "bg-[#EC5D49]": isWrong,
+        "opacity-50 cursor-not-allowed": isGameOver,
+      })
     return(
       <button key={letter}
         className={className}
@@ -112,7 +114,7 @@ function App() {
         {letterElements}
       </section>
 
-      <section className="keyboard">
+      <section className="flex flex-wrap justify-center gap-2 max-w-[450px] mb-9">
         {keyboardElements}
       </section>
       
