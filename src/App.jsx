@@ -41,7 +41,8 @@ function App() {
   const letterElements = currentWord.split("").map((letter, index) => {
     const shouldRevealLetter = isGameLost || guessedLetters.includes(letter)
     const letterClassName = clsx(
-      isGameLost&&!guessedLetters.includes(letter)&&"missed-letter"
+      'w-10 h-10 bg-[#323232] flex justify-center items-center text-lg border-b border-[#F9F4DA]',
+      isGameLost&&!guessedLetters.includes(letter)&&"text-[#EC5D49]"
     )
     return (
         <span key={index} className={letterClassName} >
@@ -63,15 +64,15 @@ function App() {
     if (isGameWon) {
       return (
         <>
-          <h2 className='text-[1.75rem] m-[5px] text-[#F9F4DA]'>You win!</h2>
+          <h2 className='text-[1.75rem] m-[5px] text-[#F9F4DA] font-bold'>You win!</h2>
           <p className='text-base m-[5px]'>Well done! You saved the hangman just in time!</p>
         </>
       )
     } else {
       return (
         <>
-          <h2>Game over!</h2>
-          <p>You lose! The hangman met his fate... better luck next time!</p>
+          <h2 className='text-[1.75rem] m-[5px] text-[#F9F4DA] font-bold'>Game over!</h2>
+          <p className='text-base m-[5px]'>You lose! The hangman met his fate... better luck next time!</p>
         </>
       )
     }
@@ -107,7 +108,7 @@ function App() {
 
       <Hangman wrongGuessCount={wrongGuessCount} />
 
-      <section className="word">
+      <section className="flex justify-center gap-[2px] mb-[20px]">
         {letterElements}
       </section>
 
