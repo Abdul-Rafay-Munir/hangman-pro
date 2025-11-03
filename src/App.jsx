@@ -99,7 +99,7 @@ function App() {
         />
       }
       <header className='text-center'>
-        <h1 className='text-[#F9F4DA] font-[2rem] font-medium'>Hangman Pro</h1>
+        <h1 className='text-[#F9F4DA] text-[2rem] font-medium'>Hangman Pro</h1>
         <p className='text-[#8E8E8E] text-base max-w-[350px]'>Guess the hidden word before you run out of 6 lives — every wrong guess brings the hangman closer to his fate!</p>
 
       </header>
@@ -118,7 +118,7 @@ function App() {
         {keyboardElements}
       </section>
       
-      {isGameOver && <button className="bg-[#11B5E5] border border-[D7D7D7] rounded-sm w-[225px] px-[12px] py-[14px] h-[40px] block cursor-pointer mx-auto" onClick={startNewGame}>New Game</button>}
+      {isGameOver && <button className="bg-[#11B5E5] border border-[D7D7D7] rounded-sm w-[225px] px-3 py-[6px] h-[40px] block cursor-pointer mx-auto" onClick={startNewGame}>New Game</button>}
     </main>
   )
 }
