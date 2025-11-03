@@ -1,6 +1,5 @@
 // Hangman.jsx
 import { useEffect, useState } from 'react';
-import clsx from 'clsx';
 
 const Hangman = ({ wrongGuessCount }) => {
   const [animationStage, setAnimationStage] = useState(0);
