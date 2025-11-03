@@ -50,9 +50,9 @@ function App() {
       )
 })
   
-  const gameStatusClass = clsx("game-status", {
-    won: isGameWon,
-    lost: isGameLost
+  const gameStatusClass = clsx("text-center rounded-sm my-[30px] w-full max-w-[350px]", {
+    "bg-[#10A95B]": isGameWon,
+    "bg-[#BA2A2A]": isGameLost
   })
 
   function renderGameStatus() {
@@ -63,8 +63,8 @@ function App() {
     if (isGameWon) {
       return (
         <>
-          <h2>You win!</h2>
-          <p>Well done! You saved the hangman just in time!</p>
+          <h2 className='text-[1.75rem] m-[5px] text-[#F9F4DA]'>You win!</h2>
+          <p className='text-base m-[5px]'>Well done! You saved the hangman just in time!</p>
         </>
       )
     } else {
@@ -87,7 +87,7 @@ function App() {
     setGuessedLetters([])
   }
   return (
-    <main>
+    <main className='flex flex-col items-center'>
       {
         isGameWon &&
         <Confetti
@@ -95,9 +95,9 @@ function App() {
           numberOfPieces={1000}
         />
       }
-      <header>
-        <h1>Hangman Pro</h1>
-        <p>Guess the hidden word before you run out of 6 lives — every wrong guess brings the hangman closer to his fate!</p>
+      <header className='text-center'>
+        <h1 className='text-[#F9F4DA] font-[2rem] font-medium'>Hangman Pro</h1>
+        <p className='text-[#8E8E8E] text-base max-w-[350px]'>Guess the hidden word before you run out of 6 lives — every wrong guess brings the hangman closer to his fate!</p>
 
       </header>
 
