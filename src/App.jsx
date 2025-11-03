@@ -24,10 +24,10 @@ function App() {
     const isCorrect = isGuessed && currentWord.includes(letter)
     const isWrong = isGuessed && !currentWord.includes(letter)
     const className = clsx(
-      "w-[35px] h-[35px] bg-[#FCBA29] border border-[#D7D7D7] rounded-[3px] cursor-pointer", {
+      "w-[35px] h-[35px] border border-[#D7D7D7] rounded-[3px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed", {
         "bg-[#10A95B]": isCorrect,
         "bg-[#EC5D49]": isWrong,
-        "opacity-50 cursor-not-allowed": isGameOver,
+        "bg-[#FCBA29]": !isCorrect && !isWrong,
       })
     return(
       <button key={letter}
