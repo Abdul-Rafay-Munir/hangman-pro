@@ -24,7 +24,7 @@ function App() {
     const isCorrect = isGuessed && currentWord.includes(letter)
     const isWrong = isGuessed && !currentWord.includes(letter)
     const className = clsx(
-      "w-[35px] h-[35px] border border-[#D7D7D7] rounded-[3px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed", {
+      "w-[35px] h-[35px] text-black border border-[#D7D7D7] rounded-[3px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed", {
         "bg-[#10A95B]": isCorrect,
         "bg-[#EC5D49]": isWrong,
         "bg-[#FCBA29]": !isCorrect && !isWrong,
